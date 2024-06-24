@@ -3,83 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Handyman Services</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="header">  
         <div class="container">
-            <h1><a href="#home">My Portfolio</a></h1>
-            <nav>
+            <div class="logo">
+                <a href="#">Handyman</a>
+            </div>
+            
+            <nav class="nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
+                
                 </ul>
             </nav>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Hi, I'm Eyoul, Finance expert and software Engineer.</p>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>[Brief bio and background]</p>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <div class="container">
-            <h2>My Work</h2>
-            <div class="gallery">
-                <!-- Add your portfolio items here -->
-                <div class="portfolio-item">
-                    <img src="file/images/audit.png" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="file/images/missing.png" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>Missing person Web application</p>
-                </div>
-                <!-- Repeat for more items -->
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button> 
+            <div class="cta">
+                <a href="#bookNow" class="btn">Book Now</a>
+                <a href="#handyman" class="btn">Handyman</a>
             </div>
         </div>
-    </section>
+        <!-- Book Now Modal -->
+<div id="bookNowModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form>
+            <h2>Book Now</h2>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="area" placeholder="Area" required>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+</div>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form action="mailto:joewag467@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send</button>
+<!-- Handyman Modal -->
+<div id="handymanModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form>
+            <h2>Handyman Registration</h2>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="area" placeholder="Area" required> 
+            <select id="handymanProfession" name="profession">
+                <option value="electrician">Electrician</option>
+                <option value="plumber">Plumber</option>
+                <option value="painter">Painter</option>
+                <option value="carpenter">Carpenter</option>
+            </select>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+    </div>
+</div>
+    </header>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Reliable Handyman Services for Your Home and Business.</h1>
+                <p>Professional repairs, maintenance, and improvements at your doorstep.</p>
+                <a href="#" class="hero-btn">Get a Free Quote</a>
+            </div>
+        </section>
+        <!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <img src="path_to_handyman_image.jpg" alt="Handyman" class="about-img"> <!-- Replace with actual image path -->
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>A team of experienced handymen with over 20 years in the industry, specializing in home and business maintenance solutions.</p>
+            <ul class="about-list">
+                <li>Licensed and insured</li>
+                <li>24/7 availability</li>
+                <li>Satisfaction guaranteed</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- Services Section -->
+<section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+        <!-- Repair Services -->
+        <div class="service">
+            <img src="path_to_repair_icon.png" alt="Repair Services">
+            <h3>Repair Services</h3>
+            <p>Plumbing, electrical, HVAC.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <!-- Maintenance -->
+        <div class="service">
+            <img src="path_to_maintenance_icon.png" alt="Maintenance">
+            <h3>Maintenance</h3>
+            <p>Lawn care, gutter cleaning.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <!-- Improvements -->
+        <div class="service">
+            <img src="path_to_improvements_icon.png" alt="Improvements">
+            <h3>Improvements</h3>
+            <p>Painting, carpentry, installations.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-carousel">
+        <!-- Testimonial 1 -->
+        <div class="testimonial">
+            <img src="path_to_client1_photo.jpg" alt="Client 1" class="testimonial-img">
+            <p class="testimonial-text">"Excellent service every time. Highly recommend!"</p>
+            <p class="client-name">- John Doe</p>
+            <div class="rating">
+                ★★★★★
+            </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial">
+            <img src="path_to_client2_photo.jpg" alt="Client 2" class="testimonial-img">
+            <p class="testimonial-text">"Very professional and thorough with their work."</p>
+            <p class="client-name">- Jane Smith</p>
+            <div class="rating">
+                ★★★★★
+            </div>
+        </div>
+        <!-- Add more testimonials as needed -->
+    </div>
+</section>
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-content">
+        <div class="contact-form">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 eyoulshimeles. All rights reserved.</p>
+        <div class="contact-details">
+            <p><strong>Phone:</strong> +1 234 567 8900</p>
+            <p><strong>Email:</strong> contact@handyman.com</p>
+            <p><strong>Address:</strong> 1234 Street, City, State, 56789</p>
+            <p><strong>Business Hours:</strong> Mon - Fri, 9:00 AM - 5:00 PM</p>
         </div>
-    </footer>
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.123456789012!2d-122.08424998529519!3d37.4219999798204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b5e7a98b8b%3A0x2b89a9f769b8f4c2!2sGoogleplex!5e0!3m2!1sen!2sus!4v1592345678901!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+           
+            </ul>
+        </div>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#"><img src="path_to_facebook_icon.png" alt="Facebook"></a>
+            <a href="#"><img src="path_to_twitter_icon.png" alt="Twitter"></a>
+            <a href="#"><img src="path_to_instagram_icon.png" alt="Instagram"></a>
+            <!-- Add more social media links as needed -->
+        </div>
+        <div class="newsletter">
+            <h3>Newsletter Signup</h3>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 [Handyman Business Name]. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>

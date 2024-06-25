@@ -38,3 +38,31 @@ window.onclick = function(event) {
         event.target.style.display = "none";
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    let currentTestimonialIndex = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    const totalTestimonials = testimonials.length;
+
+    // Function to update the testimonial display
+    function updateTestimonialDisplay() {
+        testimonials.forEach((testimonial, index) => {
+            if (index === currentTestimonialIndex) {
+                testimonial.classList.add('active');
+            } else {
+                testimonial.classList.remove('active');
+            }
+        });
+    }
+
+    // Function to move to the next testimonial
+    function nextTestimonial() {
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % totalTestimonials;
+        updateTestimonialDisplay();
+    }
+
+    // Initialize the first testimonial
+    updateTestimonialDisplay();
+
+    // Set interval to automatically change testimonials every 3 seconds
+    setInterval(nextTestimonial, 3000);
+});

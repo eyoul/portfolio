@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ለsera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">  
+        <div class="container">
+            <a href="index.html">English</a>
+            <div class="logo">
+                  <a href="#">ለsera</a>
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">መነሻ</a></li>
+                    <li><a href="#services">አገልግሎቶች</a></li>
+                    <li><a href="#about">ስለ እኛ</a></li>
+                    <li><a href="#testimonials">እቅዶች</a></li>
+                    <li><a href="#contact">እውቂያ</a></li>
+                
+                </ul>
+            </nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button> 
+            <div class="cta">
+                <a href="#bookNow" class="btn">ደንበኛ</a>
+                <a href="#handyman" class="btn">ሰራተኛ</a>
+            </div>
+        </div>
+        <!-- Book Now Modal -->
+        <div id="bookNowModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form>
+                    <h2>መዝግብ</h2>
+                    <input type="text" name="name" placeholder="ስምዎ" required>
+                    <input type="tel" name="phone" placeholder="ስልክ ቁጥር" required>
+                    <input type="password" name="password" placeholder="የይለፍ ቃል" required>
+                    <input type="text" name="area" placeholder="አካባቢ" required>
+                    <button type="submit" class="btn">መዝግብ</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Handyman Modal -->
+        <div id="handymanModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form>
+                    <h2>እቅዱን መጨመር</h2>
+                    <input type="text" name="name" placeholder="ስምዎ" required>
+                    <input type="tel" name="phone" placeholder="ስልክ ቁጥር" required>
+                    <input type="password" name="password" placeholder="የይለፍ ቃል" required>
+                    <input type="text" name="area" placeholder="አካባቢ" required> 
+                    <select id="handymanProfession" name="profession">
+                        <option value="electrician">ኤሌክትሪክ</option>
+                        <option value="plumber">አታሚ</option>
+                        <option value="painter">ሸማኔ</option>
+                        <option value="carpenter">ካርፕንተር</option>
+                    </select>
+                    <button type="submit" class="btn">መዝግብ</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>ለቤት እና ንግድ እንከንነት የሚሰጡ ሰራተኞችን ይምረጡ.</h1>
+            <p>በእንከንነት, አጠባበቅ, እና ማሻሻያ አገልግሎቶች ወደ ደረጃዎ ይምረጡ.</p>
+            <a href="#" class="hero-btn">አስተካክልን አሁን ተጠቀም</a>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <img src="images/handyman.jpg" alt="Handyman" class="about-img"> <!-- Replace with actual image path -->
+            <div class="about-content">
+                <h2>ስለ እኛ</h2>
+                <p>ትልህ ቤትን ለንግድ ቀላል የማድረግ ያንሳና ልክ የሆነ እንከንነት አገልግሎት እንሰጣለን.</p>
+                <ul class="about-list">
+                    <li>ፈቃድ እና መጠቀም</li>
+                    <li>24/7 ስራ</li>
+                    <li>እንከንነት ይከበራል</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>አገልግሎቶች</h2>
+        <div class="service-grid">
+            <!-- Repair Services -->
+            <div class="service">
+                <img src="images/plumbing.jpg" alt="Repair Services">
+                <h3>እንከንነት አገልግሎቶች</h3>
+                <p>አታሚ, ኤሌክትሪክ, HVAC.</p>
+                <a href="#" class="btn">ተጨማሪ ይማር</a>
+            </div>
+            <!-- Maintenance -->
+            <div class="service">
+                <img src="images/maintenance.jpeg" alt="Maintenance">
+                <h3>አጠባበቅ</h3>
+                <p>ደንብ እና አጠባበቅ.</p>
+                <a href="#" class="btn">ተጨማሪ ይማር</a>
+            </div>
+            <!-- Improvements -->
+            <div class="service">
+                <img src="images/improvements.jpg" alt="Improvements">
+                <h3>ማሻሻያ</h3>
+                <p>ሸማኔ, ካርፕንተር, እንቅስቃሴ.</p>
+                <a href="#" class="btn">ተጨማሪ ይማር</a>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>ደንበኞቻችን ምን ይላሉ</h2>
+        <div class="testimonial-carousel">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <img src="images/girl.png" alt="Client 1" class="testimonial-img">
+                <p class="testimonial-text">"ምርጥ አገልግሎት በሚያንከንኑ እናስተባበርላቸው."</p>
+                <p class="client-name">- ሀና እሳያስ</p>
+                <div class="rating">
+                    ★★★★★
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <img src="images/man.jpg" alt="Client 2" class="testimonial-img">
+                <p class="testimonial-text">"በጣም አስተማማኝና ወራበት የሚሰሩ አገልግሎት."</p>
+                <p class="client-name">- ጎንፋ ደጀኑ</p>
+                <div class="rating">
+                    ★★★★★
+                </div>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>እውቂያ</h2>
+        <div class="contact-content">
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="ስምዎ" required>
+                    <input type="email" name="email" placeholder="ኢሜል" required>
+                    <input type="tel" name="phone" placeholder="ስልክ ቁጥር">
+                    <textarea name="message" placeholder="መልእክትዎ" required></textarea>
+                    <button type="submit" class="btn">መላክ</button>
+                </form>
+            </div>
+            <div class="contact-details">
+                <p><strong>ስልክ:</strong> +2 519 0259 1857</p>
+                <p><strong>ኢሜል:</strong> contact@lasera.com</p>
+                <p><strong>አድራሻ:</strong> አዲስ አበባ, ልደታ, በካፕታውን</p>
+                <p><strong>የንግድ ሰዓቶች:</strong> ሰኞ - አርብ, 9:00 እና - 5:00 አማ</p>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.123456789012!2d-122.08424998529519!3d37.4219999798204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b5e7a98b8b%3A0x2b89a9f769b8f4c2!2sGoogleplex!5e0!3m2!1sen!2sus!4v1592345678901!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="quick-links">
+                <h3>ቀላል አገናኞች</h3>
+                <ul>
+                    <li><a href="#home">መነሻ</a></li>
+                    <li><a href="#services">አገልግሎቶች</a></li>
+                    <li><a href="#about">ስለ እኛ</a></li>
+                    <li><a href="#testimonials">እቅዶች</a></li>
+                    <li><a href="#contact">እውቂያ</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>በእኛ ይከተሉ</h3>
+                <a href="#"><img src="images/fb.png" alt="Facebook"></a>
+                <a href="#"><img src="images/x.png" alt="Twitter"></a>
+                <a href="#"><img src="images/insrta.png" alt="Instagram"></a>
+                <a href="#"><img src="images/tiktok.png" alt="Tiktok"></a>
+                <a href="#"><img src="images/link.jpg" alt="LinkedIn"></a>
+                <!-- Add more social media links as needed -->
+            </div>
+            <div class="newsletter">
+                <h3>የኢሜል ወሳኝነት</h3>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="ኢሜልዎ" required>
+                    <button type="submit">መዝግብ</button>
+                </form>
+            </div>
+            <div class="legal">
+                <a href="#">የግላዊነት ፖሊሲ</a>
+                <a href="#">የአገልግሎት መመሪያ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ለsera. መብቶቹ ሁሉም የተጠበቁ ናቸው.</p>
+        </div>
+    </footer>
+</body>
+</html>
